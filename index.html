@@ -25,6 +25,41 @@
       background-color: #fff;
       transition: transform 0.3s;
     }
+    .service-item, .project-item {
+  position: relative;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.arrow.left {
+  left: -15px;
+  border-width: 10px 15px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+.arrow.right {
+  right: -15px;
+  border-width: 10px 0 10px 15px;
+  border-color: transparent transparent transparent white;
+}
+
+.service-item:hover .arrow.left, .project-item:hover .arrow.left {
+  transform: translateX(-10px);
+}
+
+.service-item:hover .arrow.right, .project-item:hover .arrow.right {
+  transform: translateX(10px);
+}
+
+.service-item:hover .arrow, .project-item:hover .arrow {
+  transition: transform 0.3s;
+}
 
     .project-item {
       display: flex;
