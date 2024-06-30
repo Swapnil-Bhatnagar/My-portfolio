@@ -14,16 +14,34 @@
     }
 
     .service-item {
-      flex: 1;
-      min-width: 250px;
-      max-width: 300px;
-      margin: 20px;
+      flex: 1 0 250px; /* Flex-grow: 1, flex-shrink: 0, flex-basis: 250px */
+      margin: 10px;
       padding: 20px;
       border: 1px solid #ddd;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      background-color: #fff;
+      background-color: #333;
       transition: transform 0.3s;
+      color: white;
+      text-align: center;
+    }
+
+    .icon img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .services {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+    }
+
+    .service-container {
+      display: flex;
+      overflow-x: auto;
     }
 
     .project-item {
@@ -52,8 +70,6 @@
       flex: 1;
       max-width: 50%;
     }
-   
-
   </style>
 </head>
 
@@ -117,41 +133,39 @@
           </p>
         </div>
       </div>
-    
- <section>
-  <div class="services" style="display: flex; justify-content: space-around; flex-wrap: nowrap; max-width: 100%; overflow-x: auto;">
-    <div class="service-item" style="flex: 0 0 22%; margin: 10px; padding: 20px; border: 1px solid #ddd; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); background-color: #333; transition: transform 0.3s; text-align: center;">
-      <div class="icon">
-        <img src="https://www.shutterstock.com/shutterstock/photos/2284126663/display_1500/stock-photo-data-science-and-big-data-technology-scientist-computing-analysing-and-visualizing-complex-data-2284126663.jpg" alt="Web Designer" style="width: 100%; height: auto; border-radius: 10px; margin-bottom: 20px;">
-      </div>
-      <h2 style="font-size: 24px; color: white; margin-bottom: 10px;">Web Designer</h2>
-      <p style="font-size: 16px; color: white; line-height: 1.6;">I’m a software engineer who loves creating websites and apps. I believe that you have to be able to see the big picture when you’re building something, and that’s why I like to work with a team.</p>
-    </div>
-    <div class="service-item" style="flex: 0 0 22%; margin: 10px; padding: 20px; border: 1px solid #ddd; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); background-color: #333; transition: transform 0.3s; text-align: center;">
-      <div class="icon">
-        <img src="https://wallpaperbat.com/img/114199-engineering-wallpaper-top-free-engineering-background.jpg" alt="Software Developer" style="width: 100%; height: auto; border-radius: 10px; margin-bottom: 20px;">
-      </div>
-      <h2 style="font-size: 24px; color: white; margin-bottom: 10px;">Software Developer</h2>
-      <p style="font-size: 16px; color: white; line-height: 1.6;">Passionate software developer skilled in full-stack development, proficient in multiple languages, and committed to delivering high-quality solutions in agile environments. Stay updated on emerging technologies for effective problem-solving.</p>
-    </div>
-    <div class="service-item" style="flex: 0 0 22%; margin: 10px; padding: 20px; border: 1px solid #ddd; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); background-color: #333; transition: transform 0.3s; text-align: center;">
-      <div class="icon">
-        <img src="https://thumbs.dreamstime.com/b/agile-software-development-business-internet-techology-concept-136520882.jpg" alt="UI/UX Developer" style="width: 100%; height: auto; border-radius: 10px; margin-bottom: 20px;">
-      </div>
-      <h2 style="font-size: 24px; color: white; margin-bottom: 10px;">UI/UX Developer</h2>
-      <p style="font-size: 16px; color: white; line-height: 1.6;">Passionate UI/UX developer with a flair for creating intuitive and visually appealing digital experiences, blending creativity with technical expertise to enhance user engagement.</p>
-    </div>
-    <div class="service-item" style="flex: 0 0 22%; margin: 10px; padding: 20px; border: 1px solid #ddd; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); background-color: #333; transition: transform 0.3s; text-align: center;">
-      <div class="icon">
-        <img src="https://media.licdn.com/dms/image/D4E12AQEU7aChgwW9hA/article-cover_image-shrink_600_2000/0/1669721406461?e=2147483647&v=beta&t=RApo7LTJEMNgMkSLe4JBAzUE4v775hppm3dCzPsQDwk" alt="Data Science Learner" style="width: 100%; height: auto; border-radius: 10px; margin-bottom: 20px;">
-      </div>
-      <h2 style="font-size: 24px; color: white; margin-bottom: 10px;">Data Science Learner</h2>
-      <p style="font-size: 16px; color: white; line-height: 1.6;">Passionate data science learner with a knack for uncovering insights from complex datasets, dedicated to mastering statistical techniques and machine learning algorithms.</p>
-    </div>
-  </div>
-</section>
 
-
+      <div class="service-container">
+        <div class="service-item">
+          <div class="icon">
+            <img src="https://www.shutterstock.com/shutterstock/photos/2284126663/display_1500/stock-photo-data-science-and-big-data-technology-scientist-computing-analysing-and-visualizing-complex-data-2284126663.jpg" alt="Web Designer">
+          </div>
+          <h2>Web Designer</h2>
+          <p>I’m a software engineer who loves creating websites and apps. I believe that you have to be able to see the big picture when you’re building something, and that’s why I like to work with a team.</p>
+        </div>
+        <div class="service-item">
+          <div class="icon">
+            <img src="https://wallpaperbat.com/img/114199-engineering-wallpaper-top-free-engineering-background.jpg" alt="Software Developer">
+          </div>
+          <h2>Software Developer</h2>
+          <p>Passionate software developer skilled in full-stack development, proficient in multiple languages, and committed to delivering high-quality solutions in agile environments. Stay updated on emerging technologies for effective problem-solving.</p>
+        </div>
+        <div class="service-item">
+          <div class="icon">
+            <img src="https://thumbs.dreamstime.com/b/agile-software-development-business-internet-techology-concept-136520882.jpg" alt="UI/UX Developer">
+          </div>
+          <h2>UI/UX Developer</h2>
+          <p>Passionate UI/UX developer with a flair for creating intuitive and visually appealing digital experiences, blending creativity with technical expertise to enhance user engagement.</p>
+        </div>
+        <div class="service-item">
+          <div class="icon">
+            <img src="https://media.licdn.com/dms/image/D4E12AQEU7aChgwW9hA/article-cover_image-shrink_600_2000/0/1669721406461?e=2147483647&v=beta&t=RApo7LTJEMNgMkSLe4JBAzUE4v775hppm3dCzPsQDwk" alt="Data Science Learner">
+          </div>
+          <h2>Data Science Learner</h2>
+          <p>Passionate data science learner with a knack for uncovering insights from complex datasets, dedicated to mastering statistical techniques and machine learning algorithms.</p>
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- End Internships Section -->
 
   <!-- Projects Section -->
@@ -163,124 +177,26 @@
       <div class="all-projects">
         <div class="project-item">
           <div class="project-info">
-            <h1>Project 1</h1>
-            <h2>Video Chat App</h2>
-            <p>I've developed a video chat app utilizing WebRTC, React, and Socket.io, enabling real-time communication with seamless video and audio streaming. This project provides a smooth and interactive user experience for remote connections.</p>
-            <a href="https://github.com/Swapnil-Bhatnagar/Video_chat-App">View on GitHub</a>
+            <h2>OSM</h2>
+            <p>Open Street Map is a project I undertook where I utilized open-source mapping data to create a user-friendly interface for displaying geographical information and points of interest.</p>
           </div>
           <div class="project-img">
-            <img src="https://cdn.pixabay.com/photo/2021/08/04/13/06/software-developer-6521720_1280.jpg" alt="img">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/OpenStreetMap_logo.svg/2560px-OpenStreetMap_logo.svg.png" alt="Open Street Map Project">
           </div>
         </div>
         <div class="project-item">
           <div class="project-info">
-            <h1>Project 2</h1>
-            <h2>Blissful Bihar</h2>
-            <p>I've created a fully functional website dedicated to Bihar, featuring detailed information on restaurants, famous landmarks, and local attractions in every district. It offers users an immersive experience, showcasing Bihar's rich culture and heritage, making it a comprehensive guide for locals and tourists alike.</p>
-            <a href="https://github.com/Swapnil-Bhatnagar/Explore_Bihar" target="_blank">View on GitHub</a>
+            <h2>Portfolio Website</h2>
+            <p>Created a personal portfolio website to showcase my projects, skills, and experiences. This website is designed with a focus on aesthetics, usability, and responsiveness across devices.</p>
           </div>
           <div class="project-img">
-            <img src="https://cdn.pixabay.com/photo/2021/08/04/13/06/software-developer-6521720_1280.jpg" alt="img">
-          </div>
-        </div>
-        <div class="project-item">
-          <div class="project-info">
-            <h1>Project 3</h1>
-            <h2>GESTURE-PLAY</h2>
-            <p>Designed and developed a Django-based gesture-controlled media player, incorporating Machine Learning and computer vision for gesture interpretation, along with multithreading for intuitive media control, resulting in a positively received, fully functional product.</p>
-          </div>
-          <div class="project-img">
-            <img src="https://e0.pxfuel.com/wallpapers/626/499/desktop-wallpaper-software-development-code-at-thumbnail.jpg" alt="img">
-          </div>
-        </div>
-        <div class="project-item">
-          <div class="project-info">
-            <h1>Project 4</h1>
-            <h2>CRYPTOCURRENCY TRADING APP</h2>
-            <p>Developed a React JS and SCSS-based cryptocurrency trading app with social media features, empowering users to search, invest, and engage with their social circle, including a customizable dark mode for enhanced user experience.</p>
-            <a href="https://github.com/Swapnil-Bhatnagar/Cryptotrading" target="_blank">View on GitHub</a>
-          </div>
-          <div class="project-img">
-            <img src="https://www.shutterstock.com/image-photo/digital-software-technology-development-agile-260nw-2132893221.jpg" alt="img">
-          </div>
-        </div>
-        <div class="project-item">
-          <div class="project-info">
-            <h1>Project 5</h1>
-            <h2>ATM MANAGEMENT</h2>
-            <p>Developed a user-authenticated, full-stack healthcare website with Google API integration for locating nearby hospitals by pin-code, featuring cart functionality and Stripe for seamless payments.</p>
-          </div>
-          <div class="project-img">
-            <img src="https://e0.pxfuel.com/wallpapers/626/499/desktop-wallpaper-software-development-code-at-thumbnail.jpg" alt="img">
+            <img src="https://assets.materialup.com/uploads/2c344dfd-bd71-44c7-99b1-fb91fcfb31c3/preview.png" alt="Portfolio Website Project">
           </div>
         </div>
       </div>
     </div>
   </section>
   <!-- End Projects Section -->
-
-  <!-- About Section -->
-  <section id="about">
-    <div class="about container">
-      <div class="col-left">
-        <div class="about-img">
-          <img src="swap_photo.png" alt="img">
-        </div>
-      </div>
-      <div class="col-right">
-        <h1 class="section-title">About <span>me</span></h1>
-        <h2>Full Stack Developer || Competitive Coder</h2>
-        <p>I am a third-year Student pursuing a Bachelor's in Computer Science at KIET Group of Institutions. Proficient in full-stack web development, I bring strong skills in data structures and algorithms. Additionally, I excel as a UI/UX designer, contributing to a well-rounded approach in software development.</p>
-      </div>
-    </div>
-  </section>
-  <!-- End About Section -->
-
-  <!-- Contact Section -->
-  <section id="contact">
-    <div class="contact container">
-      <div>
-        <h1 class="section-title">Contact <span>info</span></h1>
-      </div>
-      <div class="contact-items">
-        <div class="contact-item">
-          <div class="icon"><img src="https://banner2.cleanpng.com/20180422/gde/kisspng-telephone-number-computer-icons-telephone-symbol-5adc94ac1e1fd8.6767156315244054201234.jpg" /></div>
-          <div class="contact-info">
-            <h1>Phone</h1>
-            <h2>9643580262</h2>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/new-post.png" /></div>
-          <div class="contact-info">
-            <h1>Email</h1>
-            <h2>swapnilbhatnagar2255@gmail.com</h2>
-            <h2>swapnil.2125csme1038@kiet.edu</h2>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="icon"><img src="https://i.pinimg.com/564x/f0/a4/17/f0a4170e43fae6a84ff990b6df105199.jpg" /></div>
-          <div class="contact-info">
-            <h1>Address</h1>
-            <h2>Indirapuram, Ghaziabad</h2>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End Contact Section -->
-
-  <!-- Footer -->
-  <section id="footer">
-    <div class="footer container">
-      <div class="brand">
-        <h1><span>S</span>wapnil <span>B</span>hatnagar</h1>
-      </div>
-      <h2>Enthralled by the company's vibrant culture and innovative spirit, I am eager to bring my passion for software development and my diverse skill set to contribute meaningfully to your team.</h2>
-    </div>
-  </section>
-  <!-- End Footer -->
-  <script src="./app.js"></script>
 </body>
 
 </html>
